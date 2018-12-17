@@ -1,0 +1,31 @@
+
+
+<div class="todo">
+  <a href="#" (click)="addTask()" >Add Item</a>
+<!-- <ul>
+  <li *ngFor="let task of listTask">
+    <p>{{task.id}}</p>
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.content }}</p>
+    <a href="#" (click)="removeTask(task)">delete</a>
+    <br>
+    <a href="#" (click)="updateTask(task)">update</a>
+  </li>
+</ul> -->
+
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>content</th>
+    <th>actions</th>
+  </tr>
+  <tr *ngFor="let task of listTask">
+    <td>{{task.id}}</td>
+    <td>{{task.title}}</td>
+    <td>{{task.content}}</td>
+    <td style="text-align: center;"><a href="#" (click)="removeTask(task)">delete</a> | <a href="#" (click)="updateTask(task)">update</a></td>
+  </tr>
+</table>
+</div>
+
